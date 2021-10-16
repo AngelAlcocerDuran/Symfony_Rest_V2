@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lista de Oficinas{% endblock %}
+
+{% block body %}
+<h1>Oficinas</h1>
+<hr class="bg-dark">
+<table class="table table-striped table-hover">
+    <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Teléfono</th>
+        <th scope="col">Dirección 1</th>
+        <th scope="col">Dirección 2</th>
+        <th scope="col">Estado</th>
+        <th scope="col">País</th>
+        <th scope="col">Código Postal</th>
+        <th scope="col">Territorio</th>
+    </tr>
+
+    {% for offices in lista %}
+    <tr>
+        <th scope="col">{{ offices.officecode }}</th>
+        <th scope="col">{{ offices.city }}</th>
+        <th scope="col">{{ offices.phone }}</th>
+        <th scope="col">{{ offices.addressline1 }}</th>
+        <th scope="col">{{ offices.addressline2 }}</th>
+        <th scope="col">{{ offices.state }}</th>
+        <th scope="col">{{ offices.country }}</th>
+        <th scope="col">{{ offices.postalcode }}</th>
+        <th scope="col">{{ offices.territory }}</th>
+    </tr>   
+    {% endfor %}
+</table>
+    
+{% endblock %}

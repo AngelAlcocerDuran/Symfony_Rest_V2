@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lista de Líneas de Productos{% endblock %}
+
+{% block body %}
+<h1>Líneas de Productos</h1>
+<hr class="bg-dark">
+<table class="table table-striped table-hover">
+    <tr>
+        <th scope="col">Líena de Producto</th>
+        <th scope="col">Descripción</th>
+    </tr>
+
+    {% for productlines in lista %}
+    <tr>
+        <th scope="col">{{ productlines.productline }}</th>
+        <th scope="col">{{ productlines.textdescription }}</th>
+    </tr>   
+    {% endfor %}
+</table>
+    
+{% endblock %}

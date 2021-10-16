@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lista de Clientes{% endblock %}
+
+{% block body %}
+<h1>Clientes</h1>
+<hr class="bg-dark">
+<table class="table table-striped table-hover">
+    <tr>
+        <th scope="col">Numero</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido del Contacto</th>
+        <th scope="col">Nombre del Contacto</th>
+        <th scope="col">Teléfono</th>
+        <th scope="col">Dirección 1</th>
+        <th scope="col">Dirección 2</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Código Postal</th>
+        <th scope="col">País</th>
+        <th scope="col">Límite de Crédito</th>
+    </tr>
+
+    {% for customers in lista %}
+    <tr>
+        <th scope="col">{{ customers.customernumber }}</th>
+        <th scope="col">{{ customers.customername }}</th>
+        <th scope="col">{{ customers.contactlastname }}</th>
+        <th scope="col">{{ customers.contactfirstname }}</th>
+        <th scope="col">{{ customers.phone }}</th>
+        <th scope="col">{{ customers.addressline1 }}</th>
+        <th scope="col">{{ customers.addressline2 }}</th>
+        <th scope="col">{{ customers.city }}</th>
+        <th scope="col">{{ customers.state }}</th>
+        <th scope="col">{{ customers.postalcode }}</th>
+        <th scope="col">{{ customers.country }}</th>
+        <th scope="col">{{ customers.creditlimit }}</th>
+    </tr>   
+    {% endfor %}
+</table>
+    
+{% endblock %}

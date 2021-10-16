@@ -1,0 +1,6 @@
+{
+    "require": {
+        "symfony/asset": "^4.4",
+        "twbs/bootstrap": "^5.1"
+    }
+}
